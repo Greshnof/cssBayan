@@ -1,0 +1,112 @@
+.container {
+  margin: 0 auto;
+  padding: 3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 3vh;
+}
+
+.title {
+  font-size: 5vh;
+}
+
+.img {
+  width: 40vh;
+  height: 40vh;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  height: 0%;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.bayan {
+  width: 80%;
+}
+
+
+
+/*  BAYAN STUFF  */
+
+.label-wrapper {
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.label-wrapper * {
+  pointer-events: auto;
+}
+
+.label-wrapper label {
+  pointer-events: auto;
+}
+
+.bayan input[type="radio"] {
+  display: none;
+}
+
+.tag {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 1rem;
+  color: rgb(65, 65, 185);
+  border-top: 0.2rem solid #e1dada;
+  cursor: pointer;
+}
+
+.bayan input[type="radio"]:checked + label {
+  color: black;
+}
+
+.bayan input[type="radio"]:checked + label + .content {
+  max-height: 100%;
+  transform: scaleY(1);
+  color: black;
+  transition: transform 0.2s ease-in-out;
+  padding: 1rem;
+}
+
+.bayan .content {
+  max-height: 0;
+  transform: scaleY(0);    
+  transform-origin: top;
+  overflow: hidden;
+}
+
+i {
+  visibility: hidden;
+}
+
+input:checked + label .fa-solid {
+  transform: rotate(45deg);
+  transition: all 0.2s ease-in-out;
+}
+
+
+@media (hover: hover) {
+  div.label-wrapper:hover .fa-solid {
+    transform: rotate(45deg);
+  }
+
+  div.bayan:hover i {
+    visibility: visible;
+    transition: all 0.2s ease-in;
+  }
+
+  .bayan input:hover + label + .content, .content:hover {
+    max-height: 100%;
+    transform: scaleY(1);
+    transition: transform 0.2s ease-out;
+    padding: 1rem;
+  }
+
+  div#bayan:hover label {
+    color: black;
+  }
+}
