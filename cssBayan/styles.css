@@ -1,19 +1,19 @@
 .container {
   margin: 0 auto;
-  padding: 5rem;
+  padding: 3vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 2em;
+  font-size: 3vh;
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 5vh;
 }
 
 .img {
-  width: 30rem;
-  height: 30rem;
+  width: 40vh;
+  height: 40vh;
 }
 
 .content {
@@ -22,11 +22,14 @@
   height: 0%;
   padding: 0;
   cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
 
 .bayan {
-  width: 100%;
+  width: 80%;
 }
+
+
 
 /*  BAYAN STUFF  */
 
@@ -57,13 +60,13 @@ div#bayan:hover label {
   font-weight: bold;
   padding: 1rem;
   color: rgb(65, 65, 185);
-  border-top: 1px solid #e1dada;
+  border-top: 0.2rem solid #e1dada;
   cursor: pointer;
 }
 
 .bayan .content {
   max-height: 0;
-  transition: max-height 0.5s;
+  transition: max-height 0.3s;
   overflow: hidden;
 }
 
@@ -78,7 +81,6 @@ div#bayan:hover label {
 
 .bayan input:hover + label + .content, .content:hover {
   max-height: 100%;
-  transition: all 0.3s ease-out;
 }
 
 i {
@@ -91,8 +93,10 @@ div.bayan:hover i {
 
 input:checked + label .fa-solid {
   transform: rotate(45deg);
+  transition: all 0.5s ease-out;
 }
 
 div.label-wrapper:hover .fa-solid {
   transform: rotate(45deg);
+  transition: all 0.5s ease-out;
 }
