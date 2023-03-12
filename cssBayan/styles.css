@@ -22,7 +22,7 @@
   height: 0%;
   padding: 0;
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .bayan {
@@ -64,23 +64,28 @@ div#bayan:hover label {
   cursor: pointer;
 }
 
-.bayan .content {
-  max-height: 0;
-  transition: max-height 0.3s;
-  overflow: hidden;
-}
-
 .bayan input[type="radio"]:checked + label {
   color: black;
 }
 
 .bayan input[type="radio"]:checked + label + .content {
   max-height: 100%;
+  transform: scaleY(1);
   color: black;
+  transition: transform 0.2s ease-in-out;
+}
+
+.bayan .content {
+  max-height: 0;
+  transform: scaleY(0);    
+  transform-origin: top;
+  overflow: hidden;
 }
 
 .bayan input:hover + label + .content, .content:hover {
   max-height: 100%;
+  transform: scaleY(1);
+  transition: transform 0.2s ease-out;
 }
 
 i {
@@ -89,14 +94,14 @@ i {
 
 div.bayan:hover i {
   visibility: visible;
+  transition: all 0.2s ease-in;
 }
 
 input:checked + label .fa-solid {
   transform: rotate(45deg);
-  transition: all 0.5s ease-out;
+  transition: all 0.2s ease-in-out;
 }
 
 div.label-wrapper:hover .fa-solid {
   transform: rotate(45deg);
-  transition: all 0.5s ease-out;
 }
