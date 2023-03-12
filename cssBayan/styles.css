@@ -4,12 +4,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 2em;
 }
 
 .title {
   font-size: 3rem;
 }
-
 
 .img {
   width: 30rem;
@@ -19,6 +19,9 @@
 .content {
   display: flex;
   justify-content: center;
+  height: 0%;
+  padding: 0;
+  cursor: pointer;
 }
 
 .bayan {
@@ -26,6 +29,19 @@
 }
 
 /*  BAYAN STUFF  */
+
+.label-wrapper {
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.label-wrapper * {
+  pointer-events: auto;
+}
+
+.label-wrapper label {
+  pointer-events: auto;
+}
 
 div#bayan:hover label {
   color: black;
@@ -35,8 +51,9 @@ div#bayan:hover label {
   display: none;
 }
 
-.bayan label {
-  display: block;
+.tag {
+  display: flex;
+  justify-content: space-between;
   font-weight: bold;
   padding: 1rem;
   color: rgb(65, 65, 185);
@@ -47,24 +64,35 @@ div#bayan:hover label {
 .bayan .content {
   max-height: 0;
   transition: max-height 0.5s;
-  /* transition: all 0.3s ease-in; */
   overflow: hidden;
 }
 
 .bayan input[type="radio"]:checked + label {
-  background-color: #ccc;
   color: black;
 }
 
 .bayan input[type="radio"]:checked + label + .content {
   max-height: 100%;
+  color: black;
 }
 
-.bayan input[type="radio"]:hover + label + .content {
+.bayan input:hover + label + .content, .content:hover {
   max-height: 100%;
   transition: all 0.3s ease-out;
 }
 
+i {
+  visibility: hidden;
+}
 
+div.bayan:hover i {
+  visibility: visible;
+}
 
+input:checked + label .fa-solid {
+  transform: rotate(45deg);
+}
 
+div.label-wrapper:hover .fa-solid {
+  transform: rotate(45deg);
+}
