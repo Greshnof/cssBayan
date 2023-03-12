@@ -1,6 +1,70 @@
 .container {
   margin: 0 auto;
-  padding: 5em;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+
+.img {
+  width: 30rem;
+  height: 30rem;
+}
+
+.content {
   display: flex;
   justify-content: center;
 }
+
+.bayan {
+  width: 100%;
+}
+
+/*  BAYAN STUFF  */
+
+div#bayan:hover label {
+  color: black;
+}
+
+.bayan input[type="radio"] {
+  display: none;
+}
+
+.bayan label {
+  display: block;
+  font-weight: bold;
+  padding: 1rem;
+  color: rgb(65, 65, 185);
+  border-top: 1px solid #e1dada;
+  cursor: pointer;
+}
+
+.bayan .content {
+  max-height: 0;
+  transition: max-height 0.5s;
+  /* transition: all 0.3s ease-in; */
+  overflow: hidden;
+}
+
+.bayan input[type="radio"]:checked + label {
+  background-color: #ccc;
+  color: black;
+}
+
+.bayan input[type="radio"]:checked + label + .content {
+  max-height: 100%;
+}
+
+.bayan input[type="radio"]:hover + label + .content {
+  max-height: 100%;
+  transition: all 0.3s ease-out;
+}
+
+
+
+
